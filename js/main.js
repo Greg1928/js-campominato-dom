@@ -31,6 +31,7 @@ while (userNumbers.length < 10){
         pointsCount++;
         console.log(x + " ---> Good Choice! You're Safe, for now...");
     }else{
+        alert("Number already entered! or Not Valid!");
         console.log("Number already entered! or Not Valid!");
     }
 }
