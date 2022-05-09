@@ -25,6 +25,7 @@ while (userNumbers.length < 10){
     x = (Number(prompt("enter a number From 1 To 100 and One Time: ")));
     if(randomArray.includes(x)===true){
         console.log(x + " ---> " + "You lost!");
+        alert("You Lost!");
         break;
     }else if(x < 101 && x > 0 && userNumbers.includes(x)===false){
         userNumbers.push(x);
