@@ -1,0 +1,25 @@
+h1{
+    text-align: center;
+}
+
+.list{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 70px;
+}
+.item {
+    width: calc(100% / 20 - 10px);
+    height: 50px;
+    color: black;
+    border: solid black 4px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 24px;
+    background-color: aqua;
+    cursor: pointer;
+}
+
+.red{
+    background-color: red;
+}
