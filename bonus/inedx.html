@@ -12,20 +12,36 @@
         <h1>Minesweeper</h1>
         <div class="container">
             <div class="row">
-                <div class="col-12 justify-content-center">
+                <div class="col-lg-12 justify-content-center">
                     <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" id="form">
                         <option value="0">Easy</option>
                         <option value="1">Medium</option>
                         <option value="2">Hard</option>
                       </select>
-                      <button id="btn" >Play</button>
-                      <button id="btn-reset">Reset</button>
-                      <ul class="list" >
-
-                      </ul>
+                </div>
+            </div>      
+            <div class="row">
+                <div class="col d-flex justify-content-center">
+                    <button id="btn" >Play</button>
+                    <button id="btn-reset">Reset</button>
                 </div>
             </div>
+    
+                    <div class="modal_custom">
+                       <p>You Lost!</p>
+                       <p>Bombs: <span class="bomb"></span></p>
+                       <p>Score: <span class="score" ></span></p>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <ul class="list" id="list" >
 
+                            </ul>
+                        </div>
+                    </div>
+                   
+           
+                     
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         <script src="main.js"></script>

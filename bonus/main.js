@@ -14,6 +14,7 @@ let list = document.querySelector(".list");
 let max;
 let bomb = [];
 var num;
+let pointsCount=0;
 /* do {
    difficulty = Number(prompt("Select Difficulty Level :\nDifficulty 0 => From 1 to 100\nDifficulty 1 => From 1 to 80\nDifficulty 2 => From 1 to 50"));
 }while (difficulty<0 || difficulty>2); */
@@ -35,25 +36,38 @@ if ( form.value === "0"){
             element.innerText = n;
             list.append(element);
             max=100;
+            let item = document.getElementById(n);
+            item.addEventListener('click', function(event) {
+                num = Number( event.target.id );
+                console.log(num);
+                
+                    if(bomb.includes(num)===false){
+                        this.classList.add("green");
+                        pointsCount++;
+                        
+                        
+                    }else {
+                        this.classList.add("red");
+                        event.stopImmediatePropagation;
+                        document.querySelector(".bomb").innerHTML = bomb;
+                        document.querySelector(".score").innerHTML = pointsCount;
+                        let modalCustom = document.querySelector(".modal_custom");
+                        modalCustom.classList.add("display");
+                        document.getElementById("list").style.pointerEvents = "none";
+                    }
+                    
             
+                });
         }
     }
-    let item = document.querySelector("ul");
-    item.addEventListener('click', function(event) {
-        num = ( event.target.id );
-        console.log(num);
-        
-            if(bomb.includes(num)){
-                let element = document.getElementsByClassName("item");
-                element.classList.add("red");
-            }
-        });
     while( bomb.length < 16){
         let n = getRndInteger(1, max);
         if(bomb.includes(n)===false){
             bomb.push(n);
         }
     }
+   
+    
     
     console.log("bombs: " + bomb);
 
@@ -68,6 +82,28 @@ if ( form.value === "0"){
             element.innerText = n;
             list.append(element);
             max=80;
+            let item = document.getElementById(n);
+            item.addEventListener('click', function(event) {
+                num = Number( event.target.id );
+                console.log(num);
+                
+                    if(bomb.includes(num)===false){
+                        this.classList.add("green");
+                        pointsCount++;
+                        
+                        
+                    }else {
+                        this.classList.add("red");
+                        event.stopImmediatePropagation;
+                        document.querySelector(".bomb").innerHTML = bomb;
+                        document.querySelector(".score").innerHTML = pointsCount;
+                        let modalCustom = document.querySelector(".modal_custom");
+                        modalCustom.classList.add("display");
+                        document.getElementById("list").style.pointerEvents = "none";
+                    }
+                    
+            
+                });
         }
     }
     while( bomb.length < 16){
@@ -89,6 +125,28 @@ if ( form.value === "0"){
             element.innerText = n;
             list.append(element);
             max=50;
+            let item = document.getElementById(n);
+            item.addEventListener('click', function(event) {
+                num = Number( event.target.id );
+                console.log(num);
+                
+                    if(bomb.includes(num)===false){
+                        this.classList.add("green");
+                        pointsCount++;
+                        
+                        
+                    }else {
+                        this.classList.add("red");
+                        event.stopImmediatePropagation;
+                        document.querySelector(".bomb").innerHTML = bomb;
+                        document.querySelector(".score").innerHTML = pointsCount;
+                        let modalCustom = document.querySelector(".modal_custom");
+                        modalCustom.classList.add("display");
+                        document.getElementById("list").style.pointerEvents = "none";
+                    }
+                    
+            
+                });
         }
     }
     while( bomb.length < 16){
